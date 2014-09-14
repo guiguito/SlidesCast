@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CastCompanionLibrary-android-master/CastCompanionLibrary-android-master.iml" filepath="$PROJECT_DIR$/CastCompanionLibrary-android-master/CastCompanionLibrary-android-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SlidesCast.iml" filepath="$PROJECT_DIR$/SlidesCast.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SlidesCastApp/SlidesCastApp.iml" filepath="$PROJECT_DIR$/SlidesCastApp/SlidesCastApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/licencesDialog/licencesDialog.iml" filepath="$PROJECT_DIR$/licencesDialog/licencesDialog.iml" />
+    </modules>
+  </component>
+</project>
+

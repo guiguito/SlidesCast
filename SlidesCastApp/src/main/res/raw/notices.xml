@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<notices>
+    <notice>
+        <name>NanoHTTPD</name>
+        <url>https://github.com/NanoHttpd/nanohttpd</url>
+        <copyright>Copyright (c) 2012-2013 by Paul S. Hawke, 2001,2005-2013 by Jarno Elonen, 2010 by Konstantinos Togias All rights reserved.</copyright>
+        <license>NanoHTTPD License</license>
+    </notice> 
+     <notice>
+        <name>Viewer.js</name>
+        <url>http://viewerjs.org/</url>
+        <copyright>Copyright (C) 2013-2014 KO GmbH copyright@kogmbh.com</copyright>
+        <license>Viewer.js License</license>
+    </notice>    
+     <notice>
+        <name>XStream</name>
+        <url>http://xstream.codehaus.org/index.html</url>
+        <copyright>Copyright (c) 2003-2006, Joe Walnes
+            Copyright (c) 2006-2009, 2011 XStream Committers</copyright>
+        <license>XStream License</license>
+    </notice>
+     <notice>
+        <name>Active Android</name>
+        <url>http://www.activeandroid.com/</url>
+        <copyright>Copyright (C) 2010 Michael Pardo</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>       
+    <notice>
+        <name>Android Annotation</name>
+        <url>https://github.com/excilys/androidannotations</url>
+        <copyright>Copyright (C) 2010-2014 eBusiness Information, Excilys Group</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>    
+    <notice>
+        <name>Android Iconify</name>
+        <url>https://github.com/JoanZapata/android-iconify</url>
+        <copyright>Copyright 2013 Joan Zapata</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>    
+    <notice>
+        <name>Licenses Dialog</name>
+        <url>https://github.com/PSDev/LicensesDialog</url>
+        <copyright>Copyright 2013 Philip Schiffer</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>     
+     <notice>
+        <name>EventBus</name>
+        <url>http://greenrobot.github.io/EventBus/</url>
+        <copyright>Copyright 2013 Philip Schiffer</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    <notice>
+        <name>Gson</name>
+        <url>https://code.google.com/p/google-gson/</url>
+        <copyright> Copyright 2008-2011 Google Inc.</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    <notice>
+        <name>OkHttp</name>
+        <url>http://square.github.io/okhttp/</url>
+        <copyright>Copyright 2013 Square, Inc.</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    <notice>
+        <name>Retrofit</name>
+        <url>http://square.github.io/retrofit/</url>
+        <copyright>Copyright 2013 Square, Inc.</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    <notice>
+        <name>Picasso</name>
+        <url>http://square.github.io/picasso/</url>
+        <copyright>Copyright 2013 Square, Inc.</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    <notice>
+        <name>android-support-v4-preferencefragment</name>
+        <url>https://github.com/kolavar/android-support-v4-preferencefragment</url>
+        <copyright>https://github.com/kolavar</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    <notice>
+        <name>CastCompanionLibrary-android</name>
+        <url>https://github.com/googlecast/CastCompanionLibrary-android</url>
+        <copyright>Copyright (C) 2013 Google Inc. All Rights Reserved.</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+</notices>

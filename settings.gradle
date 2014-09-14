@@ -1,0 +1,2 @@
+include ':CastCompanionLibrary-android-master',':licencesDialog', ':SlidesCastApp'
+

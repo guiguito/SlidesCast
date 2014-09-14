@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/slidescast_category">
+        <ListPreference
+            android:defaultValue="@string/slidescast_refresh_default_value"
+            android:dialogTitle="@string/slidescast_refresh_dialog"
+            android:entries="@array/slidescast_refresh_entries"
+            android:entryValues="@array/slidescast_refresh_entries_values"
+            android:key="@string/slidescast_refresh_key"
+            android:summary="@string/slidescast_refresh_summary"
+            android:title="@string/slidescast_refresh_title" />
+        <CheckBoxPreference
+            android:key="@string/slideshare_screen_on_key"
+            android:defaultValue="@bool/slideshare_screen_on_default_value"
+            android:summary="@string/slideshare_screen_on_summary"
+            android:title="@string/slideshare_screen_on_title" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/slideshare_category">
+        <EditTextPreference
+            android:dialogTitle="@string/slideshare_username_dialog"
+            android:key="@string/slideshare_username_key"
+            android:summary="@string/slideshare_username_summary"
+            android:title="@string/slideshare_username_title" />
+        <EditTextPreference
+            android:dialogTitle="@string/slideshare_password_dialog"
+            android:inputType="textPassword"
+            android:key="@string/slideshare_password_key"
+            android:summary="@string/slideshare_password_summary"
+            android:title="@string/slideshare_password_title" />
+        <ListPreference
+            android:defaultValue="@string/slideshare_search_lang_default_value"
+            android:dialogTitle="@string/slideshare_search_lang_dialog"
+            android:entries="@array/slideshare_search_lang_entries"
+            android:entryValues="@array/slideshare_search_lang_entries_values"
+            android:key="@string/slideshare_search_lang_key"
+            android:summary="@string/slideshare_search_lang_summary"
+            android:title="@string/slideshare_search_lang_title" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/others_category">
+        <Preference
+            android:key="@string/opensource_key"
+            android:summary="@string/opensource_summary"
+            android:title="@string/opensource_title" />
+        <Preference
+            android:key="@string/rate_key"
+            android:summary="@string/rate_summary"
+            android:title="@string/rate_title" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
