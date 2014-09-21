@@ -21,6 +21,13 @@ public class SlidesCastApplication extends Application {
     public static final String NAMESPACE = "urn:x-cast:com.ggt.slidescast";
     private static DataCastManager mDataCastManager;
 
+    private static Context mContext;
+
+    public SlidesCastApplication() {
+        super();
+        mContext = this;
+    }
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -33,6 +40,10 @@ public class SlidesCastApplication extends Application {
     public void onTerminate() {
         super.onTerminate();
         ActiveAndroid.dispose();
+    }
+
+    public static Context getAppContext() {
+        return mContext;
     }
 
     public static DataCastManager getDataCastManager(Context ctx) {

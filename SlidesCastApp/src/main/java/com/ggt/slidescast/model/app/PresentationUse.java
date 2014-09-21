@@ -91,9 +91,11 @@ public class PresentationUse extends Model implements Parcelable {
         List<Presentation> presentations = new ArrayList<Presentation>();
         for (PresentationUse presentationUse : presentationUses) {
             Presentation presentation = Presentation.getLastPresentationsByTypeAndExternalId(presentationUse.type, presentationUse.externalId);
-            presentation.setLasUse(presentationUse.lastUse);
             if (presentation != null) {
+                presentation.setLasUse(presentationUse.lastUse);
                 presentations.add(presentation);
+            } else {
+                presentationUse.delete();
             }
         }
         return presentations;

@@ -55,20 +55,22 @@
             android:parentActivityName=".ui.SlidesCastMainActivity_"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar"></activity>
 
-        <meta-data
-            android:name="com.crashlytics.ApiKey"
-            android:value="@string/crashLyticsApiKey" />
 
         <!--Automatic refresh -->
 
         <receiver
             android:name=".AlarmManagerReceiver"
             android:enabled="true"
-            android:exported="true"></receiver>
+            android:exported="true"/>
 
         <service
             android:name=".RefreshService_"
             android:exported="false" />
+
+        <!-- Crashlytics -->
+        <meta-data
+            android:name="com.crashlytics.ApiKey"
+            android:value="899e9b06cf77476a24bd3f9871c4867ee56de63d" />
     </application>
 
 </manifest>

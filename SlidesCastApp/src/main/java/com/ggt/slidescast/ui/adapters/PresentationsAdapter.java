@@ -30,7 +30,7 @@ public class PresentationsAdapter extends ArrayAdapter<Presentation> {
             convertView = PresentationListItem_.build(getContext());
         }
         Presentation presentation = getItem(position);
-        ((PresentationListItem) convertView).bind(presentation, false);
+        ((PresentationListItem) convertView).bind(presentation, false, true);
         return convertView;
     }
 }

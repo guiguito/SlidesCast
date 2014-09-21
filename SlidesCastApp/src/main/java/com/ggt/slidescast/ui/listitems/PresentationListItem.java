@@ -13,6 +13,7 @@ import com.ggt.slidescast.model.app.Presentation;
 import com.squareup.picasso.Picasso;
 
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EViewGroup;
 import org.androidannotations.annotations.ViewById;
 
@@ -28,10 +29,16 @@ import java.util.Date;
 public class PresentationListItem extends LinearLayout {
 
     @ViewById
-    TextView mSlideShowTitleTextView, mSlideShowAuthorTextView, mSlideShowDescriptionTextView, mSlideShowLastUseTextView;
+    TextView mSlideShowTitleTextView, mSlideShowAuthorNameTextView, mSlideShowSmallDescriptionTextView,
+            mSlideShowLargeDescriptionTextView, mSlideShowLastUseDateTextView, mSlideShowDetailsDescriptionTextView;
+
+    @ViewById
+    LinearLayout mSlideShowAuthorLinearLayout, mSlideShowLastUseLinearLayout, mSlideShowLargeDescriptionLinearLayout;
 
     @ViewById
     ImageView mSlideShowImageView;
+
+    boolean detailsShown = false;
 
     Presentation mPresentation;
 
@@ -49,7 +56,7 @@ public class PresentationListItem extends LinearLayout {
         return mPresentation;
     }
 
-    public void bind(Presentation presentation, boolean showLastUsage) {
+    public void bind(Presentation presentation, boolean showLastUsage, boolean smallDescription) {
         mPresentation = presentation;
         if (presentation.getType().equals(Presentation.PresentationType.SLIDESHARE)) {
             Picasso.with(getContext()).load(presentation.getThumbNailUrl()).error(R.drawable.slideshare_icon).into(mSlideShowImageView);
@@ -73,26 +80,51 @@ public class PresentationListItem extends LinearLayout {
         }
         mSlideShowTitleTextView.setText(Html.fromHtml(presentation.getTitle()));
         if (!TextUtils.isEmpty(presentation.getAuthor())) {
-            mSlideShowAuthorTextView.setVisibility(View.VISIBLE);
-            mSlideShowAuthorTextView.setText(Html.fromHtml(presentation.getAuthor()));
+            mSlideShowAuthorLinearLayout.setVisibility(View.VISIBLE);
+            mSlideShowAuthorNameTextView.setText(Html.fromHtml(presentation.getAuthor()));
         } else {
-            mSlideShowAuthorTextView.setVisibility(View.GONE);
+            mSlideShowAuthorLinearLayout.setVisibility(View.GONE);
         }
         if (showLastUsage) {
             if (presentation.getLasUse() != 0) {
-                mSlideShowLastUseTextView.setVisibility(View.VISIBLE);
-                mSlideShowLastUseTextView.setText(DateFormat.getDateTimeInstance().format(new Date(presentation.getLasUse())));
+                mSlideShowLastUseLinearLayout.setVisibility(View.VISIBLE);
+                mSlideShowLastUseDateTextView.setText(DateFormat.getDateTimeInstance().format(new Date(presentation.getLasUse())));
             } else {
-                mSlideShowLastUseTextView.setVisibility(View.GONE);
+                mSlideShowLastUseLinearLayout.setVisibility(View.GONE);
+            }
+        } else {
+            mSlideShowLastUseLinearLayout.setVisibility(View.GONE);
+        }
+        if (smallDescription) {
+            mSlideShowLargeDescriptionLinearLayout.setVisibility(View.GONE);
+            if (!TextUtils.isEmpty(presentation.getDescription())) {
+                mSlideShowSmallDescriptionTextView.setVisibility(View.VISIBLE);
+                mSlideShowSmallDescriptionTextView.setText(Html.fromHtml(presentation.getDescription()));
+            } else {
+                mSlideShowSmallDescriptionTextView.setVisibility(View.GONE);
+            }
+        } else {
+            //large description
+            mSlideShowSmallDescriptionTextView.setVisibility(View.GONE);
+            mSlideShowLargeDescriptionLinearLayout.setVisibility(View.VISIBLE);
+            if (!TextUtils.isEmpty(presentation.getDescription())) {
+                mSlideShowLargeDescriptionTextView.setText(Html.fromHtml(presentation.getDescription()));
+            } else {
+                mSlideShowLargeDescriptionLinearLayout.setVisibility(View.GONE);
             }
         }
-        if (!TextUtils.isEmpty(presentation.getDescription())) {
-            mSlideShowDescriptionTextView.setVisibility(View.VISIBLE);
-            mSlideShowDescriptionTextView.setText(Html.fromHtml(presentation.getDescription()));
-        } else {
-            mSlideShowDescriptionTextView.setVisibility(View.GONE);
-        }
-
     }
 
+    @Click(R.id.mSlideShowDetailsDescriptionTextView)
+    public void onShowDetailsClicked() {
+        if (detailsShown) {
+            mSlideShowLargeDescriptionTextView.setVisibility(View.GONE);
+            mSlideShowDetailsDescriptionTextView.setText(getContext().getString(R.string.show_details));
+            detailsShown = false;
+        } else {
+            detailsShown = true;
+            mSlideShowLargeDescriptionTextView.setVisibility(View.VISIBLE);
+            mSlideShowDetailsDescriptionTextView.setText(getContext().getString(R.string.hide_details));
+        }
+    }
 }

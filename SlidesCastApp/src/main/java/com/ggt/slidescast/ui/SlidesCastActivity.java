@@ -65,7 +65,7 @@ public class SlidesCastActivity extends SlidesCastMotherActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
         mSelectedPresentation = Presentation.load(Presentation.class, getIntent().getLongExtra(SlidesCastConstants.KEY_PRESENTATION_ID, -1));
         PresentationListItem slideShowHeaderLinearLayout = PresentationListItem_.build(this);
-        slideShowHeaderLinearLayout.bind(mSelectedPresentation, false);
+        slideShowHeaderLinearLayout.bind(mSelectedPresentation, false, false);
         mSlidesCastActivityMainLinearLayout.addView(slideShowHeaderLinearLayout, 0);
         Iconify.addIcons(mFirstButton, mLastButton, mLeftButton, mRightButton);
         mPresentationWebView.setOnTouchListener(new OnTouchListener() {

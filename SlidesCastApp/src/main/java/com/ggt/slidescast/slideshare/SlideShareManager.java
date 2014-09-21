@@ -1,5 +1,7 @@
 package com.ggt.slidescast.slideshare;
 
+import com.ggt.slidescast.R;
+import com.ggt.slidescast.SlidesCastApplication;
 import com.ggt.slidescast.slideshare.model.SlideShareObject;
 import com.ggt.slidescast.utils.AeSimpleSHA1;
 
@@ -27,10 +29,12 @@ public class SlideShareManager {
 
     private SlideShareApi mService;
     private EventBus mEventBus;
-    private static final String API_KEY = "GVJbmiJp";
-    private static final String SHARED_SECRET = "Th8kmSMn";
+    private static String API_KEY;
+    private static String SHARED_SECRET;
 
     public SlideShareManager() {
+        API_KEY = SlidesCastApplication.getAppContext().getString(R.string.slideshare_key);
+        SHARED_SECRET = SlidesCastApplication.getAppContext().getString(R.string.slideshare_secret);
         mEventBus = EventBus.getDefault();
         RestAdapter restAdapter = new RestAdapter.Builder().setEndpoint("https://www.slideshare.net/api/2").setConverter(new XStreamConverter()).build();
         mService = restAdapter.create(SlideShareApi.class);

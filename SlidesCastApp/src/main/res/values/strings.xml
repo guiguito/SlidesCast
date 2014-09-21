@@ -31,6 +31,10 @@
     <string name="slideshare_connect_error">There was an error connecting to SlideShare</string>
     <string name="user_auth_error">There was an error with your credentials</string>
     <string name="go_to_param">Go to parameters</string>
+    <string name="last_use">Last use :</string>
+    <string name="author">Author :</string>
+    <string name="show_details">Show details</string>
+    <string name="hide_details">Hide details</string>
     <string name="check_in_param">Please check them in parameters</string>
     <string name="title_delete_dialog">Remove</string>
     <string name="message_delete_dialog">Are you sure you want to remove %s ?</string>

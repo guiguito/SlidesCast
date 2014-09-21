@@ -6,12 +6,16 @@
     <!-- Replace placeholder ID with your tracking ID -->
     <string name="ga_trackingId"></string>
     <!-- Enable automatic activity tracking -->
-    <bool name="ga_autoActivityTracking">true</bool>
+    <bool name="ga_autoActivityTracking"></bool>
     <!-- Enable automatic exception tracking -->
-    <bool name="ga_reportUncaughtExceptions">true</bool>
+    <bool name="ga_reportUncaughtExceptions"></bool>
 
 
     <!-- Crashlytics-->
     <string name="crashLyticsApiKey"></string>
+
+    <!-- slideshare api -->
+    <string name="slideshare_key"></string>
+    <string name="slideshare_secret"></string>
 
 </resources>

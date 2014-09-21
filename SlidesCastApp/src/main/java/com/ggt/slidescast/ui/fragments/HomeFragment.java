@@ -55,7 +55,7 @@ public class HomeFragment extends MotherFragment {
             mNoLastSlidesContainerLinearLayout.setVisibility(View.GONE);
             for (Presentation presentation : presentations) {
                 PresentationListItem presentationListItem = PresentationListItem_.build(getActivity());
-                presentationListItem.bind(presentation, true);
+                presentationListItem.bind(presentation, true, true);
                 presentationListItem.setOnClickListener(new OnClickListener() {
 
                     @Override
