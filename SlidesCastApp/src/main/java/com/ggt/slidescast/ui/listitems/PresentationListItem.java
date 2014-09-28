@@ -58,9 +58,9 @@ public class PresentationListItem extends LinearLayout {
 
     public void bind(Presentation presentation, boolean showLastUsage, boolean smallDescription) {
         mPresentation = presentation;
-        if (presentation.getType().equals(Presentation.PresentationType.SLIDESHARE)) {
+        if (presentation.getType() != null && presentation.getType().equals(Presentation.PresentationType.SLIDESHARE)) {
             Picasso.with(getContext()).load(presentation.getThumbNailUrl()).error(R.drawable.slideshare_icon).into(mSlideShowImageView);
-        } else {
+        } else if (presentation.getExtension() != null) {
             // icons instead
             if (presentation.getExtension().equals(Presentation.PresentationExtensions.PDF)) {
                 Picasso.with(getContext()).load(R.drawable.icon_pdf).into(mSlideShowImageView);
@@ -77,7 +77,10 @@ public class PresentationListItem extends LinearLayout {
             } else {
                 Picasso.with(getContext()).load(R.drawable.icon_unknown);
             }
+        } else {
+            Picasso.with(getContext()).load(R.drawable.icon_unknown);
         }
+
         mSlideShowTitleTextView.setText(Html.fromHtml(presentation.getTitle()));
         if (!TextUtils.isEmpty(presentation.getAuthor())) {
             mSlideShowAuthorLinearLayout.setVisibility(View.VISIBLE);

@@ -4,6 +4,7 @@
     <string name="app_name">SlidesCast</string>
     <string name="ok">Ok</string>
     <string name="cancel">Cancel</string>
+    <string name="error">There was an error we couldn\'t handle</string>
     <string name="title_slidesservice_detail">SlidesService Detail</string>
     <string name="menu_reload">Reload</string>
     <string name="menu_cast">Cast</string>

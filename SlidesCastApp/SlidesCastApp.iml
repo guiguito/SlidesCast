@@ -93,7 +93,6 @@
     <orderEntry type="library" exported="" name="eventbus-2.2.1" level="project" />
     <orderEntry type="library" exported="" name="retrofit-1.6.1" level="project" />
     <orderEntry type="library" exported="" name="xstream-1.4.7" level="project" />
-    <orderEntry type="library" exported="" name="crashlytics" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-20.0.0" level="project" />
     <orderEntry type="library" exported="" name="libGoogleAnalyticsServices" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-20.0.0" level="project" />

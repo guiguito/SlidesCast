@@ -7,6 +7,7 @@ import android.view.View.OnTouchListener;
 import android.view.WindowManager;
 import android.webkit.WebView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.ggt.slidescast.R;
 import com.ggt.slidescast.chromecast.SlidesCastCommand;
@@ -60,6 +61,10 @@ public class SlidesCastFullScreenActivity extends SlidesCastMotherActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
         mSelectedPresentation = Presentation.load(Presentation.class, getIntent().getLongExtra(SlidesCastConstants.KEY_PRESENTATION_ID, -1));
+        if (mSelectedPresentation == null) {
+            Toast.makeText(this, getString(R.string.error), Toast.LENGTH_LONG).show();
+            finish();
+        }
         Iconify.addIcons(mFirstButton, mLastButton, mLeftButton, mRightButton);
         mPresentationWebView.getSettings().setJavaScriptEnabled(true);
         mPresentationWebView.setOnTouchListener(new OnTouchListener() {

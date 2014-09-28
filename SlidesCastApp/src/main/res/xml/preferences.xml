@@ -10,8 +10,8 @@
             android:summary="@string/slidescast_refresh_summary"
             android:title="@string/slidescast_refresh_title" />
         <CheckBoxPreference
-            android:key="@string/slideshare_screen_on_key"
             android:defaultValue="@bool/slideshare_screen_on_default_value"
+            android:key="@string/slideshare_screen_on_key"
             android:summary="@string/slideshare_screen_on_summary"
             android:title="@string/slideshare_screen_on_title" />
     </PreferenceCategory>

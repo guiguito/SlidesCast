@@ -33,7 +33,7 @@ public class SlideShareTabsAdapter extends FragmentStatePagerAdapter {
     private Fragment retrieveFragment(Class fragmentClass) {
         List<Fragment> fragments = mFragmentManager.getFragments();
         for (Fragment fragment : fragments) {
-            if (fragmentClass.equals(fragment.getClass())) {
+            if (fragmentClass != null && fragment != null && fragmentClass.equals(((Object) fragment).getClass())) {
                 return fragment;
             }
         }

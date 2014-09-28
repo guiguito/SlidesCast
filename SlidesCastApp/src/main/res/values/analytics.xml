@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="TypographyDashes">
 
+
     <!-- Google Analytics-->
 
     <!-- Replace placeholder ID with your tracking ID -->
-    <string name="ga_trackingId"></string>
+    <string name="ga_trackingId">UA-50485671-1</string>
     <!-- Enable automatic activity tracking -->
-    <bool name="ga_autoActivityTracking"></bool>
+    <bool name="ga_autoActivityTracking">true</bool>
     <!-- Enable automatic exception tracking -->
-    <bool name="ga_reportUncaughtExceptions"></bool>
+    <bool name="ga_reportUncaughtExceptions">true</bool>
 
 
     <!-- Crashlytics-->
-    <string name="crashLyticsApiKey"></string>
+    <string name="crashLyticsApiKey">899e9b06cf77476a24bd3f9871c4867ee56de63d</string>
 
     <!-- slideshare api -->
-    <string name="slideshare_key"></string>
-    <string name="slideshare_secret"></string>
+    <string name="slideshare_key">GVJbmiJp</string>
+    <string name="slideshare_secret">Th8kmSMn</string>
+
 
 </resources>
